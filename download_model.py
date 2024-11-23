@@ -1,6 +1,7 @@
 from huggingface_hub import hf_hub_download, snapshot_download
 import os
 import shutil
+import platform
 def download_models():
   base_path="."
   model_folder=f"{base_path}/pretrained_weights"
@@ -21,7 +22,11 @@ def download_models():
   print(f"Snapshot downloaded to: {snapshot_path}")
 
   model_repo = "TencentGameMate/chinese-hubert-base"  
-  folder_name="chinese-hubert-base"
+  
+  if platform.system() == "Windows":
+    folder_name="chinese-hubert-base"
+  else:
+    folder_name="TencentGameMate:chinese-hubert-base"
   download_folder = f"{model_folder}/{folder_name}"
   os.makedirs(download_folder,exist_ok=True)
   snapshot_path = snapshot_download(repo_id=model_repo, local_dir=download_folder)

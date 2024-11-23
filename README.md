@@ -68,6 +68,11 @@ cd src/utils/dependencies/XPose/models/UniPose/ops
 python setup.py build install
 cd - # equal to cd ../../../../../../../
 ```
+# 5. Download Models
+
+```
+python download_model.py
+```
 
 ## 🎒 Prepare model checkpoints
 

@@ -1,10 +1,17 @@
-from huggingface_hub import snapshot_download
+from huggingface_hub import hf_hub_download, snapshot_download
 import os
 import shutil
 def download_models():
   base_path="."
   model_folder=f"{base_path}/pretrained_weights"
   os.makedirs(model_folder,exist_ok=True)
+  
+  os.makedirs(f"{model_folder}/JoyVASA/motion_generator", exist_ok=True)
+  os.makedirs(f"{model_folder}/JoyVASA/motion_template", exist_ok=True)
+  download_folder = f"{model_folder}/JoyVASA"
+  hf_hub_download(repo_id="jdh-algo/JoyVASA", filename="motion_generator/motion_generator_hubert_chinese.pt",local_dir=download_folder)
+  hf_hub_download(repo_id="jdh-algo/JoyVASA", filename="motion_template/motion_template.pkl",local_dir=download_folder)
+
 
   model_repo = "facebook/wav2vec2-base-960h" 
   folder_name="wav2vec2-base-960h"

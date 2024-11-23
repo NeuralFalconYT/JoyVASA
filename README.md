@@ -54,21 +54,25 @@ Windows:
 ```bash
 # 1. Create base environment
 conda create -n joyvasa python=3.10 -y
-conda activate joyvasa 
+conda activate joyvasa
 
-# 2. Install requirements
+# 2. Git clone and Change Directory
+git clone https://github.com/NeuralFalconYT/JoyVASA.git
+cd JoyVASA
+
+# 3. Install requirements
 pip install -r requirements.txt
 
-# 3. Install ffmpeg
+# 4. Install ffmpeg
 sudo apt-get update  
 sudo apt-get install ffmpeg -y
 
-# 4. Install MultiScaleDeformableAttention
+# 5. Install MultiScaleDeformableAttention
 cd src/utils/dependencies/XPose/models/UniPose/ops
 python setup.py build install
 cd - # equal to cd ../../../../../../../
 
-# 5. Download Models
+# 6. Download Models
 python download_model.py
 ```
 

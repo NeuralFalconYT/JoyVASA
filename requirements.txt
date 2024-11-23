@@ -43,3 +43,4 @@ tyro==0.8.5
 gradio==5.1.0
 pykalman==0.9.7
 huggingface-hub>=0.26.2
+click>=8.1.7

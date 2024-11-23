@@ -193,13 +193,13 @@ with gr.Blocks(theme=gr.themes.Soft(font=[gr.themes.GoogleFont("Plus Jakarta San
         ],
         show_progress=True
     )
-
+# demo.queue().launch(debug=True,share=True)
 import click
 @click.command()
 @click.option("--debug", is_flag=True, default=False, help="Enable debug mode.")
 @click.option("--share", is_flag=True, default=False, help="Enable sharing of the interface.")
 def main(debug, share):    
-  # demo.queue().launch(debug=debug,share=share)
   demo.queue().launch(allowed_paths=[gradio_temp_dir],debug=debug,share=share)
-
+if __name__ == "__main__":
+    main()
 #python colab.py --deubg --share

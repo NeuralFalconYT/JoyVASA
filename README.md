@@ -54,21 +54,21 @@ Windows:
 
 1. Create base environment
 ```
-conda create -n joyvasa python=3.10 -y
-conda activate joyvasa
+conda create -n myenv python=3.10 -y
+conda activate myenv
 ```
 or 
 Using virtualenv
 ```
-python -m venv joyvasa
+python -m venv myenv
 ```
 Activate the virtual environment (Linux/Mac)
 ```
-source joyvasa/bin/activate
+source myenv/bin/activate
 ```
 Activate the virtual environment (Windows)
 ```
-joyvasa\Scripts\activate
+myenv\Scripts\activate
 ```
 
 

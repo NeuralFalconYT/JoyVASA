@@ -48,14 +48,31 @@ Windows:
 
 - Tested on Windows 11, CUDA 12.1
 - Tested GPUs: RTX 4060 Laptop 8GB VRAM GPU
+- 
+# **Local SetUP:**
+### [Install ffmpeg](https://www.youtube.com/watch?v=JR36oH35Fgg)
 
-**Create environment:**
-
-```bash
-# 1. Create base environment
+1. Create base environment
+```
 conda create -n joyvasa python=3.10 -y
 conda activate joyvasa
+```
+or 
+Using virtualenv
+```
+python -m venv joyvasa
+```
+Activate the virtual environment (Linux/Mac)
+```
+source joyvasa/bin/activate
+```
+Activate the virtual environment (Windows)
+```
+joyvasa\Scripts\activate
+```
 
+
+```
 # 2. Git clone and Change Directory
 git clone https://github.com/NeuralFalconYT/JoyVASA.git
 cd JoyVASA
